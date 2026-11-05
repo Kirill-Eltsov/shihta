@@ -1,0 +1,298 @@
+{
+  "ts": "2026-11-05T19:32:19",
+  "expected_books": 12,
+  "loaded_books": 12,
+  "loaded_sheets": 36,
+  "missing_files": [],
+  "errors": [],
+  "sheets": [
+    {
+      "file": "Заказы.xls",
+      "sheet": "март 2022",
+      "n_rows": 222,
+      "n_cols": 11,
+      "out_csv": "data/processed/loader/Заказы__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Заказы.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 180,
+      "n_cols": 11,
+      "out_csv": "data/processed/loader/Заказы__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Заказы.xls",
+      "sheet": "май 2022",
+      "n_rows": 292,
+      "n_cols": 11,
+      "out_csv": "data/processed/loader/Заказы__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Шихта.xls",
+      "sheet": "март 2022",
+      "n_rows": 6656,
+      "n_cols": 15,
+      "out_csv": "data/processed/loader/Шихта__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Шихта.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 5268,
+      "n_cols": 15,
+      "out_csv": "data/processed/loader/Шихта__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Шихта.xls",
+      "sheet": "май 2022",
+      "n_rows": 5286,
+      "n_cols": 15,
+      "out_csv": "data/processed/loader/Шихта__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Линии дозирования.xls",
+      "sheet": "март 2022",
+      "n_rows": 4054,
+      "n_cols": 16,
+      "out_csv": "data/processed/loader/Линии дозирования__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Линии дозирования.xls",
+      "sheet": "аперль 2022",
+      "n_rows": 4075,
+      "n_cols": 16,
+      "out_csv": "data/processed/loader/Линии дозирования__аперль_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Линии дозирования.xls",
+      "sheet": "май 2022",
+      "n_rows": 4440,
+      "n_cols": 16,
+      "out_csv": "data/processed/loader/Линии дозирования__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Прессовка.xls",
+      "sheet": "март 2022",
+      "n_rows": 731,
+      "n_cols": 24,
+      "out_csv": "data/processed/loader/Прессовка__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Прессовка.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 691,
+      "n_cols": 24,
+      "out_csv": "data/processed/loader/Прессовка__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Прессовка.xls",
+      "sheet": "май 2022",
+      "n_rows": 835,
+      "n_cols": 24,
+      "out_csv": "data/processed/loader/Прессовка__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Подача порошков.xls",
+      "sheet": "март 2022",
+      "n_rows": 976,
+      "n_cols": 12,
+      "out_csv": "data/processed/loader/Подача порошков__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Подача порошков.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 991,
+      "n_cols": 12,
+      "out_csv": "data/processed/loader/Подача порошков__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Подача порошков.xls",
+      "sheet": "май 2022",
+      "n_rows": 1061,
+      "n_cols": 12,
+      "out_csv": "data/processed/loader/Подача порошков__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Проценты.xls",
+      "sheet": "март 2022",
+      "n_rows": 13,
+      "n_cols": 8,
+      "out_csv": "data/processed/loader/Проценты__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Проценты.xls",
+      "sheet": "аперль 2022",
+      "n_rows": 13,
+      "n_cols": 8,
+      "out_csv": "data/processed/loader/Проценты__аперль_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Проценты.xls",
+      "sheet": "май 2022",
+      "n_rows": 13,
+      "n_cols": 8,
+      "out_csv": "data/processed/loader/Проценты__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Сдача.xls",
+      "sheet": "март 2022",
+      "n_rows": 657,
+      "n_cols": 12,
+      "out_csv": "data/processed/loader/Сдача__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Сдача.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 617,
+      "n_cols": 12,
+      "out_csv": "data/processed/loader/Сдача__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Сдача.xls",
+      "sheet": "май 2022",
+      "n_rows": 1034,
+      "n_cols": 12,
+      "out_csv": "data/processed/loader/Сдача__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Садка.xls",
+      "sheet": "март 2022",
+      "n_rows": 3305,
+      "n_cols": 13,
+      "out_csv": "data/processed/loader/Садка__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Садка.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 3460,
+      "n_cols": 13,
+      "out_csv": "data/processed/loader/Садка__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Садка.xls",
+      "sheet": "май 2022",
+      "n_rows": 3593,
+      "n_cols": 13,
+      "out_csv": "data/processed/loader/Садка__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Печи.xls",
+      "sheet": "март 2022",
+      "n_rows": 1808,
+      "n_cols": 16,
+      "out_csv": "data/processed/loader/Печи__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Печи.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 1680,
+      "n_cols": 16,
+      "out_csv": "data/processed/loader/Печи__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Печи.xls",
+      "sheet": "май 2022",
+      "n_rows": 1900,
+      "n_cols": 16,
+      "out_csv": "data/processed/loader/Печи__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Простои.xls",
+      "sheet": "март 2022",
+      "n_rows": 889,
+      "n_cols": 17,
+      "out_csv": "data/processed/loader/Простои__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Простои.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 940,
+      "n_cols": 17,
+      "out_csv": "data/processed/loader/Простои__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Простои.xls",
+      "sheet": "май 2022",
+      "n_rows": 977,
+      "n_cols": 17,
+      "out_csv": "data/processed/loader/Простои__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Нормы прессовки.xls",
+      "sheet": "март 2022",
+      "n_rows": 5873,
+      "n_cols": 9,
+      "out_csv": "data/processed/loader/Нормы прессовки__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Нормы прессовки.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 5873,
+      "n_cols": 9,
+      "out_csv": "data/processed/loader/Нормы прессовки__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Нормы прессовки.xls",
+      "sheet": "май 2022",
+      "n_rows": 5874,
+      "n_cols": 9,
+      "out_csv": "data/processed/loader/Нормы прессовки__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Доп операции.xls",
+      "sheet": "март 2022",
+      "n_rows": 1308,
+      "n_cols": 15,
+      "out_csv": "data/processed/loader/Доп операции__март_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Доп операции.xls",
+      "sheet": "апрель 2022",
+      "n_rows": 1089,
+      "n_cols": 15,
+      "out_csv": "data/processed/loader/Доп операции__апрель_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    },
+    {
+      "file": "Доп операции.xls",
+      "sheet": "май 2022",
+      "n_rows": 1106,
+      "n_cols": 15,
+      "out_csv": "data/processed/loader/Доп операции__май_2022.csv",
+      "provenance": "src_file/src_sheet/src_row"
+    }
+  ]
+}
