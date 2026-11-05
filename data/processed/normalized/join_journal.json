@@ -1,0 +1,18 @@
+{
+  "ts": "2026-11-05T19:33:39",
+  "sheets_accounted": 36,
+  "march": {
+    "orders_events": 222,
+    "shihta_component_rows": 6656,
+    "recipe_keys": 686,
+    "orders_with_any_recipe_mass": 222,
+    "lines_events": 4054,
+    "press_events": 730,
+    "lines_row_multiply_on_self_dedupe": false
+  },
+  "rules": [
+    "all 36 sheets listed in loader registry",
+    "recipe component rows are reference, not new demand events",
+    "order↔recipe checked at mass level without exploding components onto orders"
+  ]
+}
