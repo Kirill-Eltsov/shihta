@@ -1,0 +1,31 @@
+{
+  "ts": "2026-11-05T19:35:59",
+  "inputs": {
+    "zakazy.csv": "80e99f3b1a175cbc3f5aaee4ef1e67b791d3127185d1f9825f6f061f38d6afe0",
+    "recepty.csv": "8b0362cd3e4bd305c496177ce568f882aa8855af1ad3b28f261905e0c26f9271",
+    "kachestvo.csv": "9eb8b08501e0f575032cf94d88a0b660fcee20e8efbc4ccda9f5c99c5e948dc3"
+  },
+  "config": {
+    "period": "2022-03",
+    "n_orders_slice": 40,
+    "objective": "sum demand * q",
+    "q_fallback": 0.5,
+    "scenario_label": "educational"
+  },
+  "versions": {
+    "python": "3.13.3",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3"
+  },
+  "solver_log": {
+    "status": "Optimal",
+    "objective": 3336.085,
+    "bound_gap": null,
+    "time_note": "embedded in scipy milp runtime; wall clock not separately timed here",
+    "solver": "scipy.optimize.milp (HiGHS)"
+  },
+  "march_scenario_label": "educational",
+  "old_baseline_block": "Danila Colab notebook baseline not re-run locally (Colab/pulp path); educational model used instead"
+}
