@@ -1,0 +1,8 @@
+{
+  "n_orders": 222,
+  "n_masses": 23,
+  "n_recipes": 686,
+  "total_demand_t": 7357.234,
+  "n_supply_comps": 46,
+  "greedy_quality_obj": 5418.226
+}
