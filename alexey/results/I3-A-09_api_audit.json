@@ -1,0 +1,8 @@
+{
+  "scipy_version": "1.17.0",
+  "signature": "(c, *, integrality=None, bounds=None, constraints=None, options=None)",
+  "x0_parameter": false,
+  "tiny_objective": 3.0,
+  "warm_start_consumption_proven": false,
+  "scope": "installed scipy public interface; no claim about other solver APIs"
+}
