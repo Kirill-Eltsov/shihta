@@ -1,0 +1,9 @@
+{
+  "ts": "2026-11-05T19:34:12",
+  "order_positions": 694,
+  "strict_single_candidate_positions": 0,
+  "control_target_694": 694,
+  "control_694_note": "zakazy has 694 order rows; single-candidate count depends on recipe coverage",
+  "positions_with_any_recipe": 694,
+  "no_unconfirmed_expansions": true
+}
