@@ -1,0 +1,101 @@
+{
+  "valid": {
+    "valid": true,
+    "errors": [],
+    "used_t": {
+      "A": 1.0,
+      "B": 0.8999999999999999,
+      "C": 1.1
+    },
+    "remaining_t": {
+      "A": 0.0,
+      "B": 1.1102230246251565e-16,
+      "C": 0.0
+    }
+  },
+  "empty": {
+    "valid": false,
+    "errors": [
+      "order_count:1:0",
+      "order_count:2:0",
+      "order_count:3:0"
+    ],
+    "used_t": {
+      "A": 0.0,
+      "B": 0.0,
+      "C": 0.0
+    },
+    "remaining_t": {
+      "A": 1.0,
+      "B": 0.9,
+      "C": 1.1
+    }
+  },
+  "missing": {
+    "valid": false,
+    "errors": [
+      "order_count:3:0"
+    ],
+    "used_t": {
+      "A": 0.8,
+      "B": 0.6,
+      "C": 0.6
+    },
+    "remaining_t": {
+      "A": 0.19999999999999996,
+      "B": 0.30000000000000004,
+      "C": 0.5000000000000001
+    }
+  },
+  "duplicate": {
+    "valid": false,
+    "errors": [
+      "order_count:1:2",
+      "stock_exceeded:A",
+      "stock_exceeded:B",
+      "stock_exceeded:C"
+    ],
+    "used_t": {
+      "A": 1.6,
+      "B": 1.2,
+      "C": 1.2000000000000002
+    },
+    "remaining_t": {
+      "A": -0.6000000000000001,
+      "B": -0.29999999999999993,
+      "C": -0.10000000000000009
+    }
+  },
+  "forbidden": {
+    "valid": false,
+    "errors": [
+      "forbidden_recipe:1:UNKNOWN"
+    ],
+    "used_t": {
+      "A": 0.4,
+      "B": 0.6,
+      "C": 1.0
+    },
+    "remaining_t": {
+      "A": 0.6,
+      "B": 0.30000000000000004,
+      "C": 0.10000000000000009
+    }
+  },
+  "stock_excess": {
+    "valid": false,
+    "errors": [
+      "stock_exceeded:A"
+    ],
+    "used_t": {
+      "A": 1.7999999999999998,
+      "B": 0.8999999999999999,
+      "C": 0.30000000000000004
+    },
+    "remaining_t": {
+      "A": -0.7999999999999998,
+      "B": 1.1102230246251565e-16,
+      "C": 0.8
+    }
+  }
+}
