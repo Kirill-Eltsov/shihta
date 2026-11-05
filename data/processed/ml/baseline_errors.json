@@ -1,0 +1,15 @@
+{
+  "ts": "2026-11-05T19:38:20",
+  "awaiting_T09": true,
+  "training_allowed": false,
+  "reason": "T09 label/protocol not confirmed by analytics; baselines computed on available q2 only as diagnostic, not claimed ML-ready",
+  "n_draft_events": 662,
+  "n_q2_available": 46,
+  "mae": {
+    "all_good_1": 0.5038343254686649,
+    "train_mean": 0.4545930630217544,
+    "fallback_global_mean": 0.41217875380981966,
+    "simple_mean_model": 0.4545930630217544
+  },
+  "may_used_for_tuning": false
+}
