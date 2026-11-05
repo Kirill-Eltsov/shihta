@@ -1,0 +1,11 @@
+{
+  "ts": "2026-11-05T19:38:21",
+  "scipy_version": "1.16.3",
+  "milp_signature": "(c, *, integrality=None, bounds=None, constraints=None, options=None)",
+  "supports_x0_param": false,
+  "tiny_solve_status": true,
+  "tiny_objective": 3.0,
+  "conclusion": "not_confirmed",
+  "note": "Presence of a parameter alone is not treated as proof the solver consumes the start",
+  "fallback_if_unsupported": "compare heuristics vs MILP honestly as separate tracks"
+}
