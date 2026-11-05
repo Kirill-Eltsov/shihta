@@ -1,0 +1,92 @@
+{
+  "scope": "reference controls passed; Kirill integration not tested",
+  "input_sha256": "4d6b9ee09651c418987e40e94c1810365afbe91bdc52f063b59c16e11375b8c2",
+  "python": "3.12.14",
+  "scipy": "1.17.0",
+  "checks_run": 8,
+  "all_passed": true,
+  "checks": [
+    {
+      "id": "base",
+      "status": "optimal",
+      "objective": 2.5,
+      "plan": [
+        {
+          "order_id": "1",
+          "recipe_id": "H"
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "L"
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "L"
+        }
+      ],
+      "used_t": {
+        "A": 1.0,
+        "B": 0.8999999999999999,
+        "C": 1.1
+      }
+    },
+    {
+      "id": "deficit",
+      "status": "infeasible",
+      "objective": null,
+      "proof": "complete enumeration and MILP status 2"
+    },
+    {
+      "id": "changed_q",
+      "status": "optimal",
+      "objective": 2.35,
+      "plan": [
+        {
+          "order_id": "1",
+          "recipe_id": "L"
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "L"
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "H"
+        }
+      ],
+      "used_t": {
+        "A": 1.0,
+        "B": 0.8999999999999999,
+        "C": 1.1
+      }
+    },
+    {
+      "id": "forbidden_candidate",
+      "status": "invalid_plan",
+      "objective": null,
+      "errors": [
+        "forbidden_recipe:1:H"
+      ]
+    },
+    {
+      "id": "forbidden_does_not_imply_infeasible",
+      "passed": true
+    },
+    {
+      "id": "explicit_changed_q_old_plan",
+      "objective": 1.65,
+      "passed": true
+    },
+    {
+      "id": "unproven_empty",
+      "status": "no_solution_found",
+      "objective": null
+    },
+    {
+      "id": "malformed_output",
+      "status": "error",
+      "objective": null,
+      "error": "'order_id'"
+    }
+  ]
+}
