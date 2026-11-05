@@ -1,0 +1,12 @@
+{
+  "ts": "2026-11-05T19:35:58",
+  "period": "2022-03",
+  "n_orders": 25,
+  "n_vars": 3610,
+  "status": "Optimal",
+  "objective": 3336.085,
+  "solver": "scipy.optimize.milp (HiGHS)",
+  "data_separation": "educational March slice from processed CSV; not mixed with Colab notebook outputs",
+  "model_basis": "assignment MILP: one recipe per order; obj = sum demand*q; q2 or fallback 0.5",
+  "awaiting_A_model_spec": true
+}
