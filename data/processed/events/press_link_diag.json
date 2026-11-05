@@ -1,0 +1,14 @@
+{
+  "ts": "2026-11-05T19:38:19",
+  "sheet": "март 2022",
+  "n_press_rows": 731,
+  "n_linked_to_lines": 662,
+  "n_unlinked": 72,
+  "n_linked_with_catalog_mass_shikhta": 656,
+  "n_positive_denominator": 656,
+  "card_controls_note": "Bitrix mentions 2255/2245/2225 — compare to our month sheet counts; differences logged, not hidden",
+  "final_ml_sample_declared": false,
+  "awaiting_T09": true,
+  "good_col": "Годное, шт",
+  "scrap_col": "Брак, шт."
+}
