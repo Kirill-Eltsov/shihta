@@ -1,0 +1,86 @@
+{
+  "empty_assignment_metrics": {
+    "objective": 0.0,
+    "violation": 0.0,
+    "would_pass_violation_only": true
+  },
+  "global_quality_probe": {
+    "global_score": 9.0,
+    "alternative_q_score_expected": 1.0,
+    "q_is_function_argument": false
+  },
+  "data_stats": {
+    "zakazy": {
+      "rows": 694,
+      "fields": [
+        "period",
+        "order_id",
+        "mass_code",
+        "mass_name",
+        "group_code",
+        "product_code",
+        "demand_t",
+        "order_t",
+        "extra_order_t"
+      ],
+      "sha256": "5dfb485e0ce8d0517bf4ff590f7b4e03baf4c838a7f50ea9c7d984e1ad857979"
+    },
+    "recepty": {
+      "rows": 17204,
+      "fields": [
+        "period",
+        "mass_code",
+        "mass_name",
+        "shikhta_num",
+        "order_code",
+        "powder_code",
+        "powder_name",
+        "substitutes",
+        "norm_pct"
+      ],
+      "sha256": "a16ff923e2f2ff949833f3a3a8c68aec256d2eef9804dc048b2fc62d6a73d406"
+    },
+    "kachestvo": {
+      "rows": 1812,
+      "fields": [
+        "period",
+        "mass_code",
+        "shikhta_num",
+        "good_t",
+        "scrap_t",
+        "press_yield",
+        "q2_press_yield",
+        "has_press_history"
+      ],
+      "sha256": "0c019cfe67940a6c3c02a13094ddebf325af4cb433ef4a04b11d5de636a4606e"
+    },
+    "ml_events_draft": {
+      "rows": 662,
+      "unique_event_ids": 662,
+      "fields": [
+        "event_id",
+        "disp",
+        "sh",
+        "Марка массы, код",
+        "known_at",
+        "feature_after_recipe_flag",
+        "include",
+        "exclude_reason"
+      ],
+      "contains_date_and_target": false,
+      "note": "No timestamp/good/bad/target fields in this draft; known_at is not an event date."
+    }
+  },
+  "isolated_reproductions": {
+    "i2_k06_milp.py": {
+      "returncode": 0,
+      "stdout": "{\"ts\": \"2026-11-05T23:40:38\", \"period\": \"2022-03\", \"n_orders\": 25, \"n_vars\": 3610, \"status\": \"Optimal\", \"objective\": 3336.085, \"solver\": \"scipy.optimize.milp (HiGHS)\", \"data_separation\": \"educational March slice from processed CSV; not mixed with Colab notebook outputs\", \"model_basis\": \"assignment MILP: one recipe per order; obj = sum demand*q; q2 or fallback 0.5\", \"awaiting_A_model_spec\": true}\n",
+      "stderr": ""
+    },
+    "i2_k08_validate.py": {
+      "returncode": 0,
+      "stdout": "{\"ts\": \"2026-11-05T23:40:39\", \"toy_variants\": 8, \"enum_objective\": 19.65, \"milp_objective\": 19.65, \"objectives_match\": true, \"validate_plan_ok\": true, \"enum_plan\": [\"A1\", \"B1\", \"C2\"], \"milp_plan\": [\"A1\", \"B1\", \"C2\"], \"note\": \"Independent toy check; industrial Danila baseline still blocked locally\"}\n",
+      "stderr": ""
+    }
+  }
+}
