@@ -1,0 +1,19 @@
+{
+  "ts": "2026-11-05T19:36:58",
+  "toy_variants": 8,
+  "enum_objective": 19.65,
+  "milp_objective": 19.65,
+  "objectives_match": true,
+  "validate_plan_ok": true,
+  "enum_plan": [
+    "A1",
+    "B1",
+    "C2"
+  ],
+  "milp_plan": [
+    "A1",
+    "B1",
+    "C2"
+  ],
+  "note": "Independent toy check; industrial Danila baseline still blocked locally"
+}
