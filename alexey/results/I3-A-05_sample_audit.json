@@ -1,0 +1,73 @@
+{
+  "rows": 662,
+  "unique_event_ids": 662,
+  "duplicate_event_ids": 0,
+  "fields": [
+    "event_id",
+    "disp",
+    "sh",
+    "Марка массы, код",
+    "known_at",
+    "feature_after_recipe_flag",
+    "include",
+    "exclude_reason"
+  ],
+  "coverage": {
+    "sh": {
+      "95.0": 17,
+      "59.0": 42,
+      "93.0": 145,
+      "77.0": 27,
+      "189.0": 15,
+      "53.0": 41,
+      "129.0": 5,
+      "126.0": 10,
+      "7.0": 18,
+      "1.0": 10,
+      "13.0": 43,
+      "147.0": 31,
+      "76.0": 25,
+      "9.0": 14,
+      "49.0": 64,
+      "8.0": 12,
+      "130.0": 18,
+      "56.0": 38,
+      "113.0": 3,
+      "23.0": 11,
+      "46.0": 5,
+      "58.0": 3,
+      "20.0": 3,
+      "22.0": 12,
+      "185.0": 11,
+      "10.0": 3,
+      "131.0": 8,
+      "125.0": 4,
+      "171.0": 14,
+      "0.0": 6,
+      "29.0": 4
+    },
+    "Марка массы, код": {
+      "153357.0": 102,
+      "153356.0": 345,
+      "153355.0": 150,
+      "93073.0": 19,
+      "153358.0": 28,
+      "44219.0": 18
+    },
+    "feature_after_recipe_flag": {
+      "False": 662
+    },
+    "include": {
+      "True": 656,
+      "False": 6
+    }
+  },
+  "sha256": "d92b8a4f1aa2caca8292f499a348a4b3a1cccca501f07a0ae0fac91e3cc8abb9",
+  "press_rows": 731,
+  "linked": 662,
+  "unlinked": 72,
+  "linked_plus_unlinked": 734,
+  "counts_reconcile": false,
+  "training_allowed": false,
+  "reason": "No confirmed target or precise event time; linked-row counts are not necessarily independent events."
+}
