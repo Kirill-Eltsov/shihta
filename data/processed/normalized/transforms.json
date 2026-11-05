@@ -1,0 +1,230 @@
+{
+  "ts": "2026-11-05T19:32:51",
+  "transforms": [
+    {
+      "source": "data/processed/loader/Заказы__апрель_2022.csv",
+      "book": "Заказы",
+      "sheet": "апрель 2022",
+      "n_in": 180,
+      "n_events": 180,
+      "n_excluded": 0,
+      "key_cols": [
+        "Марка массы, код"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Заказы__апрель_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Заказы__апрель_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Заказы__май_2022.csv",
+      "book": "Заказы",
+      "sheet": "май 2022",
+      "n_in": 292,
+      "n_events": 292,
+      "n_excluded": 0,
+      "key_cols": [
+        "Марка массы, код"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Заказы__май_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Заказы__май_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Заказы__март_2022.csv",
+      "book": "Заказы",
+      "sheet": "март 2022",
+      "n_in": 222,
+      "n_events": 222,
+      "n_excluded": 0,
+      "key_cols": [
+        "Марка массы, код"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Заказы__март_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Заказы__март_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Линии дозирования__аперль_2022.csv",
+      "book": "Линии дозирования",
+      "sheet": "аперль 2022",
+      "n_in": 4075,
+      "n_events": 4075,
+      "n_excluded": 0,
+      "key_cols": [
+        "Марка массы, код",
+        "Номер шихты",
+        "Компонент, код"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Линии дозирования__аперль_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Линии дозирования__аперль_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Линии дозирования__май_2022.csv",
+      "book": "Линии дозирования",
+      "sheet": "май 2022",
+      "n_in": 4440,
+      "n_events": 4440,
+      "n_excluded": 0,
+      "key_cols": [
+        "Марка массы, код",
+        "Номер шихты",
+        "Компонент, код"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Линии дозирования__май_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Линии дозирования__май_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Линии дозирования__март_2022.csv",
+      "book": "Линии дозирования",
+      "sheet": "март 2022",
+      "n_in": 4054,
+      "n_events": 4054,
+      "n_excluded": 0,
+      "key_cols": [
+        "Марка массы, код",
+        "Номер шихты",
+        "Компонент, код"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Линии дозирования__март_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Линии дозирования__март_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Подача порошков__апрель_2022.csv",
+      "book": "Подача порошков",
+      "sheet": "апрель 2022",
+      "n_in": 991,
+      "n_events": 991,
+      "n_excluded": 0,
+      "key_cols": [
+        "nMaterialId"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Подача порошков__апрель_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Подача порошков__апрель_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Подача порошков__май_2022.csv",
+      "book": "Подача порошков",
+      "sheet": "май 2022",
+      "n_in": 1061,
+      "n_events": 1059,
+      "n_excluded": 2,
+      "key_cols": [
+        "nMaterialId"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Подача порошков__май_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Подача порошков__май_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Подача порошков__март_2022.csv",
+      "book": "Подача порошков",
+      "sheet": "март 2022",
+      "n_in": 976,
+      "n_events": 976,
+      "n_excluded": 0,
+      "key_cols": [
+        "nMaterialId"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Подача порошков__март_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Подача порошков__март_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Прессовка__апрель_2022.csv",
+      "book": "Прессовка",
+      "sheet": "апрель 2022",
+      "n_in": 691,
+      "n_events": 691,
+      "n_excluded": 0,
+      "key_cols": [
+        "Распоряжение, код",
+        "№ шихты"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Прессовка__апрель_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Прессовка__апрель_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Прессовка__май_2022.csv",
+      "book": "Прессовка",
+      "sheet": "май 2022",
+      "n_in": 835,
+      "n_events": 834,
+      "n_excluded": 1,
+      "key_cols": [
+        "Распоряжение, код",
+        "№ шихты"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Прессовка__май_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Прессовка__май_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Прессовка__март_2022.csv",
+      "book": "Прессовка",
+      "sheet": "март 2022",
+      "n_in": 731,
+      "n_events": 730,
+      "n_excluded": 1,
+      "key_cols": [
+        "Распоряжение, код",
+        "№ шихты"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Прессовка__март_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Прессовка__март_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Шихта__апрель_2022.csv",
+      "book": "Шихта",
+      "sheet": "апрель 2022",
+      "n_in": 5268,
+      "n_events": 5268,
+      "n_excluded": 0,
+      "key_cols": [
+        "Марка массы, код",
+        "Номер шихты",
+        "Компонент, код"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Шихта__апрель_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Шихта__апрель_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Шихта__май_2022.csv",
+      "book": "Шихта",
+      "sheet": "май 2022",
+      "n_in": 5286,
+      "n_events": 5286,
+      "n_excluded": 0,
+      "key_cols": [
+        "Марка массы, код",
+        "Номер шихты",
+        "Компонент, код"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Шихта__май_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Шихта__май_2022__excluded.csv"
+    },
+    {
+      "source": "data/processed/loader/Шихта__март_2022.csv",
+      "book": "Шихта",
+      "sheet": "март 2022",
+      "n_in": 6656,
+      "n_events": 6656,
+      "n_excluded": 0,
+      "key_cols": [
+        "Марка массы, код",
+        "Номер шихты",
+        "Компонент, код"
+      ],
+      "rule": "exclude rows with any empty key; do not glue missing keys",
+      "events_csv": "data/processed/normalized/Шихта__март_2022__events.csv",
+      "excluded_csv": "data/processed/normalized/Шихта__март_2022__excluded.csv"
+    }
+  ]
+}
