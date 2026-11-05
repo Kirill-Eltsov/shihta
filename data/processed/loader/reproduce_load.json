@@ -1,0 +1,9 @@
+{
+  "ts": "2026-11-05T19:33:46",
+  "books": 12,
+  "sheets": 36,
+  "sheet_counts_match_previous": true,
+  "provenance_columns_ok": true,
+  "registry_sha256": "844c5a3c1434848bd32ff1b4bdfab979b3d8866d2f84b5f3c476bf400e37e9fa",
+  "sample_csv": "data/processed/loader/Заказы__март_2022.csv"
+}
