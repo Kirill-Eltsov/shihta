@@ -1,0 +1,18 @@
+ts=2026-11-05T19:29:44
+python=3.13.3
+cwd=C:\Users\user\Desktop\shikhta-ml
+OK pandas 2.3.3
+OK numpy 2.3.3
+OK xlrd 2.0.2
+OK scipy 1.16.3
+MISS pulp
+MISS ortools
+MISS gurobipy
+LOAD_OK Шихта.xls shape=(6656, 15)
+LOAD_OK Заказы.xls shape=(222, 11)
+LOAD_OK Линии дозирования.xls shape=(4054, 16)
+notebook_cells=17
+NOTE: notebook expects Google Colab uploads and names like Линии_дозирования.xls
+BLOCK: pulp not installed locally; full CBC path from notebook not reproduced here
+BLOCK: separate industrial solver source code absent (only notebook + prep script)
+RESULT: registry inputs readable; local end-to-end notebook solve not claimed
