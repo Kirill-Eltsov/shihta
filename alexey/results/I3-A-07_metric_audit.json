@@ -1,0 +1,78 @@
+{
+  "diagnostic_only": true,
+  "target": "normalized March aggregate q2, not confirmed event label",
+  "n": 46,
+  "train_n": 32,
+  "test_n": 14,
+  "mae": {
+    "all_good_1": 0.5038343254686649,
+    "train_mean": 0.4545930630217544,
+    "fallback_global_mean": 0.41217875380981966,
+    "simple_mean_model": 0.4545930630217544
+  },
+  "matches_saved_errors": true,
+  "simple_model_equals_train_mean": true,
+  "leaking_method": "fallback_global_mean uses train and test targets",
+  "best_nonleaking_control_in_this_diagnostic": "train_mean",
+  "train_mean_errors_by_recipe": {
+    "153356/171": {
+      "n": 1,
+      "mae": 0.09083014156087177
+    },
+    "153356/189": {
+      "n": 1,
+      "mae": 0.8214641111106066
+    },
+    "153357/23": {
+      "n": 1,
+      "mae": 0.6521823604981426
+    },
+    "153357/49": {
+      "n": 1,
+      "mae": 0.5180606699062436
+    },
+    "153357/53": {
+      "n": 1,
+      "mae": 0.38224224699381815
+    },
+    "153357/59": {
+      "n": 1,
+      "mae": 0.4592732160963875
+    },
+    "153357/88": {
+      "n": 1,
+      "mae": 0.10790764517328155
+    },
+    "153357/89": {
+      "n": 1,
+      "mae": 0.8920923548267184
+    },
+    "153357/93": {
+      "n": 1,
+      "mae": 0.4126771739584855
+    },
+    "153357/95": {
+      "n": 1,
+      "mae": 0.8676523993947504
+    },
+    "153357/185": {
+      "n": 1,
+      "mae": 0.055901315608092306
+    },
+    "153358/29": {
+      "n": 1,
+      "mae": 0.8920923548267184
+    },
+    "153358/91": {
+      "n": 1,
+      "mae": 0.10401924717716304
+    },
+    "153358/93": {
+      "n": 1,
+      "mae": 0.10790764517328155
+    }
+  },
+  "event_scale_error": "not identifiable from normalized recipe aggregates",
+  "final_may_test_performed": false,
+  "ml_usefulness_established": false
+}
