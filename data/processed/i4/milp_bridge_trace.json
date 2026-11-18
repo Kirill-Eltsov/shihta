@@ -1,0 +1,296 @@
+{
+  "scope": "I4-K-03 milp bridge with explicit q",
+  "scenarios_sha256": "4d6b9ee09651c418987e40e94c1810365afbe91bdc52f063b59c16e11375b8c2",
+  "warm_start": "not_used",
+  "traces": [
+    {
+      "scenario_id": "base",
+      "input": {
+        "q_explicit": [
+          {
+            "order_id": "1",
+            "recipe_id": "H",
+            "value": 0.95
+          },
+          {
+            "order_id": "1",
+            "recipe_id": "L",
+            "value": 0.7
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "H",
+            "value": 0.9
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L",
+            "value": 0.8
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "H",
+            "value": 0.85
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "L",
+            "value": 0.75
+          }
+        ],
+        "n_assignment_vars": 6,
+        "stocks": {
+          "A": 1.0,
+          "B": 0.9,
+          "C": 1.1
+        },
+        "orders": {
+          "1": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "2": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "3": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          }
+        },
+        "warm_start": false,
+        "warm_start_status": "not_confirmed_not_used"
+      },
+      "output": {
+        "status": "optimal",
+        "raw_solver_status": 0,
+        "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "H"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "L"
+          }
+        ],
+        "objective": 2.5,
+        "bound": 2.5,
+        "gap_abs": 0.0,
+        "gap_rel": 0.0,
+        "used_t": {
+          "A": 1.0,
+          "B": 0.8999999999999999,
+          "C": 1.1
+        },
+        "timings": {
+          "build_s": 3.800005652010441e-05,
+          "solve_s": 0.0025404999032616615,
+          "total_s": 0.002693000016734004
+        },
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      }
+    },
+    {
+      "scenario_id": "deficit",
+      "input": {
+        "q_explicit": [
+          {
+            "order_id": "1",
+            "recipe_id": "H",
+            "value": 0.95
+          },
+          {
+            "order_id": "1",
+            "recipe_id": "L",
+            "value": 0.7
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "H",
+            "value": 0.9
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L",
+            "value": 0.8
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "H",
+            "value": 0.85
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "L",
+            "value": 0.75
+          }
+        ],
+        "n_assignment_vars": 6,
+        "stocks": {
+          "A": 1.0,
+          "B": 0.8,
+          "C": 1.1
+        },
+        "orders": {
+          "1": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "2": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "3": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          }
+        },
+        "warm_start": false,
+        "warm_start_status": "not_confirmed_not_used"
+      },
+      "output": {
+        "status": "infeasible",
+        "raw_solver_status": 2,
+        "termination_reason": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+        "plan": [],
+        "objective": null,
+        "bound": null,
+        "gap_abs": null,
+        "gap_rel": null,
+        "used_t": null,
+        "timings": {
+          "build_s": 1.5600118786096573e-05,
+          "solve_s": 0.0009079999290406704,
+          "total_s": 0.0009319998789578676
+        },
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+      }
+    },
+    {
+      "scenario_id": "changed_q",
+      "input": {
+        "q_explicit": [
+          {
+            "order_id": "1",
+            "recipe_id": "H",
+            "value": 0.1
+          },
+          {
+            "order_id": "1",
+            "recipe_id": "L",
+            "value": 0.7
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "H",
+            "value": 0.9
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L",
+            "value": 0.8
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "H",
+            "value": 0.85
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "L",
+            "value": 0.75
+          }
+        ],
+        "n_assignment_vars": 6,
+        "stocks": {
+          "A": 1.0,
+          "B": 0.9,
+          "C": 1.1
+        },
+        "orders": {
+          "1": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "2": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "3": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          }
+        },
+        "warm_start": false,
+        "warm_start_status": "not_confirmed_not_used"
+      },
+      "output": {
+        "status": "optimal",
+        "raw_solver_status": 0,
+        "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "H"
+          }
+        ],
+        "objective": 2.35,
+        "bound": 2.35,
+        "gap_abs": 0.0,
+        "gap_rel": 0.0,
+        "used_t": {
+          "A": 1.0,
+          "B": 0.8999999999999999,
+          "C": 1.1
+        },
+        "timings": {
+          "build_s": 1.5900004655122757e-05,
+          "solve_s": 0.0008286999072879553,
+          "total_s": 0.0008872998878359795
+        },
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "suite_id": "I4_reference_v1",
+  "scenarios": [
+    {
+      "scenario_id": "base",
+      "origin": "synthetic",
+      "q_version": "q_v1_reference",
+      "case": {
+        "synthetic": true,
+        "period": "educational",
+        "orders": {
+          "1": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "2": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "3": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          }
+        },
+        "recipes": {
+          "H": {
+            "usage_t_per_t": {
+              "A": 0.6,
+              "B": 0.3,
+              "C": 0.1
+            }
+          },
+          "L": {
+            "usage_t_per_t": {
+              "A": 0.2,
+              "B": 0.3,
+              "C": 0.5
+            }
+          }
+        },
+        "stocks": {
+          "A": 1.0,
+          "B": 0.9,
+          "C": 1.1
+        }
+      },
+      "q": [
+        {
+          "order_id": "1",
+          "recipe_id": "H",
+          "value": 0.95
+        },
+        {
+          "order_id": "1",
+          "recipe_id": "L",
+          "value": 0.7
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "H",
+          "value": 0.9
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "L",
+          "value": 0.8
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "H",
+          "value": 0.85
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "L",
+          "value": 0.75
+        }
+      ],
+      "expected_status": "optimal",
+      "expected_objective": 2.5
+    },
+    {
+      "scenario_id": "deficit",
+      "origin": "synthetic",
+      "q_version": "q_v1_reference",
+      "case": {
+        "synthetic": true,
+        "period": "educational",
+        "orders": {
+          "1": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "2": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "3": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          }
+        },
+        "recipes": {
+          "H": {
+            "usage_t_per_t": {
+              "A": 0.6,
+              "B": 0.3,
+              "C": 0.1
+            }
+          },
+          "L": {
+            "usage_t_per_t": {
+              "A": 0.2,
+              "B": 0.3,
+              "C": 0.5
+            }
+          }
+        },
+        "stocks": {
+          "A": 1.0,
+          "B": 0.8,
+          "C": 1.1
+        }
+      },
+      "q": [
+        {
+          "order_id": "1",
+          "recipe_id": "H",
+          "value": 0.95
+        },
+        {
+          "order_id": "1",
+          "recipe_id": "L",
+          "value": 0.7
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "H",
+          "value": 0.9
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "L",
+          "value": 0.8
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "H",
+          "value": 0.85
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "L",
+          "value": 0.75
+        }
+      ],
+      "expected_status": "infeasible",
+      "expected_objective": null
+    },
+    {
+      "scenario_id": "changed_q",
+      "origin": "synthetic",
+      "q_version": "q_v2_first_H_0.1",
+      "case": {
+        "synthetic": true,
+        "period": "educational",
+        "orders": {
+          "1": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "2": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          },
+          "3": {
+            "demand_t": 1.0,
+            "candidates": [
+              "H",
+              "L"
+            ]
+          }
+        },
+        "recipes": {
+          "H": {
+            "usage_t_per_t": {
+              "A": 0.6,
+              "B": 0.3,
+              "C": 0.1
+            }
+          },
+          "L": {
+            "usage_t_per_t": {
+              "A": 0.2,
+              "B": 0.3,
+              "C": 0.5
+            }
+          }
+        },
+        "stocks": {
+          "A": 1.0,
+          "B": 0.9,
+          "C": 1.1
+        }
+      },
+      "q": [
+        {
+          "order_id": "1",
+          "recipe_id": "H",
+          "value": 0.1
+        },
+        {
+          "order_id": "1",
+          "recipe_id": "L",
+          "value": 0.7
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "H",
+          "value": 0.9
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "L",
+          "value": 0.8
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "H",
+          "value": 0.85
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "L",
+          "value": 0.75
+        }
+      ],
+      "expected_status": "optimal",
+      "expected_objective": 2.35
+    }
+  ]
+}

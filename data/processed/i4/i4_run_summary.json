@@ -1,0 +1,96 @@
+{
+  "scope": "I4-K full control contour (Kirill)",
+  "generated_at": "2026-11-18T15:51:03.651462+00:00",
+  "entry_point": "scripts/iteration4/run_i4.py",
+  "all_ok": true,
+  "steps": [
+    {
+      "script": "milp_bridge.py",
+      "returncode": 0,
+      "stdout": "{\"out\": \"C:\\\\Users\\\\user\\\\Desktop\\\\shikhta-ml\\\\data\\\\processed\\\\i4\\\\milp_bridge_trace.json\", \"n\": 3}",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "script": "run_controls.py",
+      "returncode": 0,
+      "stdout": "{\"all_passed\": true, \"checks_run\": 6, \"out\": \"C:\\\\Users\\\\user\\\\Desktop\\\\shikhta-ml\\\\data\\\\processed\\\\i4\\\\k_control_results.json\"}",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "script": "run_benchmark.py",
+      "returncode": 0,
+      "stdout": "{\"all_passed\": true, \"out\": \"C:\\\\Users\\\\user\\\\Desktop\\\\shikhta-ml\\\\data\\\\processed\\\\i4\\\\benchmark_control.json\", \"n\": 3}",
+      "stderr": "",
+      "ok": true
+    }
+  ],
+  "artifacts": {
+    "scenarios": "data/processed/i4/scenarios_v1.json",
+    "config": "data/processed/i4/method_config.json",
+    "bridge_trace": "data/processed/i4/milp_bridge_trace.json",
+    "controls": "data/processed/i4/k_control_results.json",
+    "benchmark": "data/processed/i4/benchmark_control.json",
+    "docs": "docs/iteration4/"
+  },
+  "scenario_results": [
+    {
+      "scenario_id": "base",
+      "milp_status": "optimal",
+      "milp_objective": 2.5,
+      "milp_plan": [
+        {
+          "order_id": "1",
+          "recipe_id": "H"
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "L"
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "L"
+        }
+      ],
+      "greedy_status": "feasible",
+      "greedy_objective": 2.35,
+      "passed": true
+    },
+    {
+      "scenario_id": "deficit",
+      "milp_status": "infeasible",
+      "milp_objective": null,
+      "milp_plan": [],
+      "greedy_status": "no_solution_found",
+      "greedy_objective": null,
+      "passed": true
+    },
+    {
+      "scenario_id": "changed_q",
+      "milp_status": "optimal",
+      "milp_objective": 2.35,
+      "milp_plan": [
+        {
+          "order_id": "1",
+          "recipe_id": "L"
+        },
+        {
+          "order_id": "2",
+          "recipe_id": "L"
+        },
+        {
+          "order_id": "3",
+          "recipe_id": "H"
+        }
+      ],
+      "greedy_status": "feasible",
+      "greedy_objective": 1.6500000000000001,
+      "passed": true
+    }
+  ],
+  "notes": [
+    "Contour covers G2 educational control scenarios from Alexey I4-A-01.",
+    "Does not claim industrial Colab baseline or ML/warm-start."
+  ]
+}

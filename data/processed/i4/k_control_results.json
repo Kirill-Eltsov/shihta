@@ -1,0 +1,203 @@
+{
+  "scope": "Kirill I4-K resource MILP controls on Alexey scenarios_v1",
+  "method": "resource_milp + greedy_quality control",
+  "input_sha256": "4d6b9ee09651c418987e40e94c1810365afbe91bdc52f063b59c16e11375b8c2",
+  "python": "3.13.3",
+  "scipy": "1.16.3",
+  "checks_run": 6,
+  "all_passed": true,
+  "checks": [
+    {
+      "scenario_id": "base",
+      "milp": {
+        "status": "optimal",
+        "raw_solver_status": 0,
+        "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "H"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "L"
+          }
+        ],
+        "objective": 2.5,
+        "bound": 2.5,
+        "gap_abs": 0.0,
+        "gap_rel": 0.0,
+        "used_t": {
+          "A": 1.0,
+          "B": 0.8999999999999999,
+          "C": 1.1
+        },
+        "timings": {
+          "build_s": 6.550014950335026e-05,
+          "solve_s": 0.002426199847832322,
+          "total_s": 0.0025962002109736204
+        },
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      },
+      "greedy": {
+        "status": "feasible",
+        "raw_solver_status": null,
+        "termination_reason": "greedy_quality",
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "H"
+          }
+        ],
+        "objective": 2.35,
+        "bound": null,
+        "gap_abs": null,
+        "gap_rel": null,
+        "used_t": {
+          "A": 1.0,
+          "B": 0.8999999999999999,
+          "C": 1.1
+        },
+        "timings": {
+          "total_s": 7.199984975159168e-05
+        },
+        "message": null
+      },
+      "passed": true
+    },
+    {
+      "scenario_id": "deficit",
+      "milp": {
+        "status": "infeasible",
+        "raw_solver_status": 2,
+        "termination_reason": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+        "plan": [],
+        "objective": null,
+        "bound": null,
+        "gap_abs": null,
+        "gap_rel": null,
+        "used_t": null,
+        "timings": {
+          "build_s": 1.5200115740299225e-05,
+          "solve_s": 0.0008527000900357962,
+          "total_s": 0.0008758001495152712
+        },
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+      },
+      "greedy": {
+        "status": "no_solution_found",
+        "raw_solver_status": null,
+        "termination_reason": "greedy_no_feasible",
+        "plan": [],
+        "objective": null,
+        "bound": null,
+        "gap_abs": null,
+        "gap_rel": null,
+        "used_t": null,
+        "timings": {
+          "total_s": 7.609999738633633e-05
+        },
+        "message": "stock_exceeded:B; stock_exceeded:C"
+      },
+      "passed": true
+    },
+    {
+      "scenario_id": "changed_q",
+      "milp": {
+        "status": "optimal",
+        "raw_solver_status": 0,
+        "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "H"
+          }
+        ],
+        "objective": 2.35,
+        "bound": 2.35,
+        "gap_abs": 0.0,
+        "gap_rel": 0.0,
+        "used_t": {
+          "A": 1.0,
+          "B": 0.8999999999999999,
+          "C": 1.1
+        },
+        "timings": {
+          "build_s": 1.4899997040629387e-05,
+          "solve_s": 0.0008324999362230301,
+          "total_s": 0.0008870000019669533
+        },
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      },
+      "greedy": {
+        "status": "feasible",
+        "raw_solver_status": null,
+        "termination_reason": "greedy_quality",
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "H"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "L"
+          }
+        ],
+        "objective": 1.6500000000000001,
+        "bound": null,
+        "gap_abs": null,
+        "gap_rel": null,
+        "used_t": {
+          "A": 1.0,
+          "B": 0.8999999999999999,
+          "C": 1.1
+        },
+        "timings": {
+          "total_s": 6.809993647038937e-05
+        },
+        "message": null
+      },
+      "passed": true
+    },
+    {
+      "id": "forbidden_candidate",
+      "status": "invalid_plan",
+      "passed": true
+    },
+    {
+      "id": "explicit_changed_q_old_plan",
+      "objective": 1.65,
+      "passed": true
+    },
+    {
+      "id": "milp_base_optimal",
+      "status": "optimal",
+      "objective": 2.5,
+      "passed": true
+    }
+  ]
+}
