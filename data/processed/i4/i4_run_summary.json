@@ -1,6 +1,6 @@
 {
-  "scope": "I4-K full control contour (Kirill)",
-  "generated_at": "2026-11-18T15:51:03.651462+00:00",
+  "scope": "I4-K control contour after K-09 runner fixes (Kirill)",
+  "generated_at": "2026-11-25T11:03:40.600012+00:00",
   "entry_point": "scripts/iteration4/run_i4.py",
   "all_ok": true,
   "steps": [
@@ -21,7 +21,7 @@
     {
       "script": "run_benchmark.py",
       "returncode": 0,
-      "stdout": "{\"all_passed\": true, \"out\": \"C:\\\\Users\\\\user\\\\Desktop\\\\shikhta-ml\\\\data\\\\processed\\\\i4\\\\benchmark_control.json\", \"n\": 3}",
+      "stdout": "{\"all_passed\": true, \"out\": \"C:\\\\Users\\\\user\\\\Desktop\\\\shikhta-ml\\\\data\\\\processed\\\\i4\\\\benchmark_control.json\", \"timeout_demo\": \"C:\\\\Users\\\\user\\\\Desktop\\\\shikhta-ml\\\\data\\\\processed\\\\i4\\\\timeout_demo.json\", \"n\": 3, \"valid_plan_share\": 0.6666666666666666}",
       "stderr": "",
       "ok": true
     }
@@ -32,7 +32,25 @@
     "bridge_trace": "data/processed/i4/milp_bridge_trace.json",
     "controls": "data/processed/i4/k_control_results.json",
     "benchmark": "data/processed/i4/benchmark_control.json",
+    "timeout_demo": "data/processed/i4/timeout_demo.json",
     "docs": "docs/iteration4/"
+  },
+  "coverage": {
+    "planned_runs": 24,
+    "recorded_runs": 24,
+    "valid_plans_across_reps": 16,
+    "valid_plan_share": 0.6666666666666666
+  },
+  "timeout_demo": {
+    "budget_s": 0.2,
+    "overrun": {
+      "status": "timeout_without_plan",
+      "hard_timeout": true,
+      "budget_exceeded": true,
+      "plan_empty": true,
+      "wall_s": 0.21793600000091828
+    },
+    "passed": true
   },
   "scenario_results": [
     {
@@ -90,7 +108,9 @@
     }
   ],
   "notes": [
-    "Contour covers G2 educational control scenarios from Alexey I4-A-01.",
+    "Contour covers G2/G3 educational control scenarios from Alexey I4-A-01.",
+    "I4-K-09: hard external timeout, full repetition journal, threads diagnostic.",
+    "I4-K-10 primary series is NOT run here; blocked until Alexey series admission.",
     "Does not claim industrial Colab baseline or ML/warm-start."
   ]
 }

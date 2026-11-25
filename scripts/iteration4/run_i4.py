@@ -69,8 +69,10 @@ def main() -> int:
                 }
             )
 
+    coverage = (bench or {}).get("coverage")
+    timeout_demo = (bench or {}).get("timeout_demo")
     summary = {
-        "scope": "I4-K full control contour (Kirill)",
+        "scope": "I4-K control contour after K-09 runner fixes (Kirill)",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "entry_point": "scripts/iteration4/run_i4.py",
         "all_ok": all_ok and bool(controls and controls.get("all_passed")) and bool(bench and bench.get("all_passed")),
@@ -81,11 +83,16 @@ def main() -> int:
             "bridge_trace": "data/processed/i4/milp_bridge_trace.json",
             "controls": "data/processed/i4/k_control_results.json",
             "benchmark": "data/processed/i4/benchmark_control.json",
+            "timeout_demo": "data/processed/i4/timeout_demo.json",
             "docs": "docs/iteration4/",
         },
+        "coverage": coverage,
+        "timeout_demo": timeout_demo,
         "scenario_results": rows,
         "notes": [
-            "Contour covers G2 educational control scenarios from Alexey I4-A-01.",
+            "Contour covers G2/G3 educational control scenarios from Alexey I4-A-01.",
+            "I4-K-09: hard external timeout, full repetition journal, threads diagnostic.",
+            "I4-K-10 primary series is NOT run here; blocked until Alexey series admission.",
             "Does not claim industrial Colab baseline or ML/warm-start.",
         ],
     }

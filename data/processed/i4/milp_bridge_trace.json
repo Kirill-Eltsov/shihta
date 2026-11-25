@@ -98,9 +98,9 @@
           "C": 1.1
         },
         "timings": {
-          "build_s": 3.800005652010441e-05,
-          "solve_s": 0.0025404999032616615,
-          "total_s": 0.002693000016734004
+          "build_s": 3.749999450519681e-05,
+          "solve_s": 0.0021492999949259683,
+          "total_s": 0.002290099990204908
         },
         "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
       }
@@ -183,9 +183,9 @@
         "gap_rel": null,
         "used_t": null,
         "timings": {
-          "build_s": 1.5600118786096573e-05,
-          "solve_s": 0.0009079999290406704,
-          "total_s": 0.0009319998789578676
+          "build_s": 1.5700003132224083e-05,
+          "solve_s": 0.0008512999920640141,
+          "total_s": 0.0008753000001888722
         },
         "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
       }
@@ -285,9 +285,9 @@
           "C": 1.1
         },
         "timings": {
-          "build_s": 1.5900004655122757e-05,
-          "solve_s": 0.0008286999072879553,
-          "total_s": 0.0008872998878359795
+          "build_s": 1.5300000086426735e-05,
+          "solve_s": 0.0008262999908765778,
+          "total_s": 0.0008847999997669831
         },
         "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
       }

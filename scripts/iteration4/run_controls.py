@@ -31,7 +31,12 @@ def main() -> int:
     raw = SCENARIOS.read_bytes()
     sha = hashlib.sha256(raw).hexdigest()
     if sha != EXPECTED_SHA:
-        raise SystemExit(f"scenarios hash mismatch: {sha} != {EXPECTED_SHA}")
+        normalized = raw.replace(b"\r\n", b"\n")
+        sha_n = hashlib.sha256(normalized).hexdigest()
+        if sha_n != EXPECTED_SHA:
+            raise SystemExit(f"scenarios hash mismatch: {sha} (normalized {sha_n}) != {EXPECTED_SHA}")
+        SCENARIOS.write_bytes(normalized)
+        raw, sha = normalized, sha_n
 
     payload = json.loads(raw)
     checks = []

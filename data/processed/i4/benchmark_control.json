@@ -1,12 +1,45 @@
 {
-  "scope": "I4-K-07/08 control benchmark collection",
-  "config_id": "i4_resource_milp_v1",
+  "scope": "I4-K-09 control benchmark with hard timeout and full repetition journal",
+  "config_id": "i4_resource_milp_v1_k09",
+  "protocol_ref": "I4-A-09 / G3 blockers",
   "scenarios_sha256": "4d6b9ee09651c418987e40e94c1810365afbe91bdc52f063b59c16e11375b8c2",
   "python": "3.13.3",
   "scipy": "1.16.3",
+  "numpy": "2.3.3",
   "platform": "Windows-10-10.0.19045-SP0",
   "reps": 4,
   "time_budget_s": 120.0,
+  "threads": {
+    "requested_threads": 1,
+    "env_thread_limits": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "cpu_count_logical": 12,
+    "platform": "Windows-10-10.0.19045-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "loadavg": null,
+    "thread_mode_note": "Requested threads=1 applied via BLAS/OpenMP env vars. scipy.optimize.milp/HiGHS has no separate threads option in this wrapper; single-thread intent recorded diagnostically."
+  },
+  "timeout_demo": {
+    "budget_s": 0.2,
+    "overrun": {
+      "status": "timeout_without_plan",
+      "hard_timeout": true,
+      "budget_exceeded": true,
+      "plan_empty": true,
+      "wall_s": 0.21793600000091828
+    },
+    "passed": true
+  },
+  "coverage": {
+    "planned_runs": 24,
+    "recorded_runs": 24,
+    "valid_plans_across_reps": 16,
+    "valid_plan_share": 0.6666666666666666
+  },
   "all_passed": true,
   "n_scenarios": 3,
   "rows": [
@@ -43,25 +76,294 @@
             "C": 1.1
           },
           "timings": {
-            "build_s": 3.7400051951408386e-05,
-            "solve_s": 0.002209399826824665,
-            "total_s": 0.0023668999783694744
+            "build_s": 4.680000711232424e-05,
+            "solve_s": 0.002105199993820861,
+            "total_s": 0.0022696999949403107
           },
           "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
-          "wall_s": 0.0023803000804036856
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "remaining_t": {
+              "A": 0.0,
+              "B": 1.1102230246251565e-16,
+              "C": 0.0
+            }
+          },
+          "timings_stages": {
+            "prep_s": 1.00000761449337e-07,
+            "call_s": 0.002278300002217293,
+            "validate_s": 9.900002623908222e-06,
+            "total_s": 0.002291200013132766
+          },
+          "budget_s": 120.0,
+          "budget_exceeded": false,
+          "wall_s": 0.002291200013132766,
+          "hard_timeout": false,
+          "external_wall_s": 0.7129241999937221,
+          "repetition": 1
         },
+        "repetitions": [
+          {
+            "status": "optimal",
+            "raw_solver_status": 0,
+            "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "H"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "L"
+              }
+            ],
+            "objective": 2.5,
+            "bound": 2.5,
+            "gap_abs": 0.0,
+            "gap_rel": 0.0,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "build_s": 4.680000711232424e-05,
+              "solve_s": 0.002105199993820861,
+              "total_s": 0.0022696999949403107
+            },
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.002278300002217293,
+              "validate_s": 9.900002623908222e-06,
+              "total_s": 0.002291200013132766
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.002291200013132766,
+            "hard_timeout": false,
+            "external_wall_s": 0.7129241999937221,
+            "repetition": 1
+          },
+          {
+            "status": "optimal",
+            "raw_solver_status": 0,
+            "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "H"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "L"
+              }
+            ],
+            "objective": 2.5,
+            "bound": 2.5,
+            "gap_abs": 0.0,
+            "gap_rel": 0.0,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "build_s": 4.889999399892986e-05,
+              "solve_s": 0.002257500003906898,
+              "total_s": 0.0024370999890379608
+            },
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.0024476999969920143,
+              "validate_s": 1.0099989594891667e-05,
+              "total_s": 0.0024603999918326735
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0024603999918326735,
+            "hard_timeout": false,
+            "external_wall_s": 0.7294391000032192,
+            "repetition": 2
+          },
+          {
+            "status": "optimal",
+            "raw_solver_status": 0,
+            "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "H"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "L"
+              }
+            ],
+            "objective": 2.5,
+            "bound": 2.5,
+            "gap_abs": 0.0,
+            "gap_rel": 0.0,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "build_s": 4.239998816046864e-05,
+              "solve_s": 0.0019349000067450106,
+              "total_s": 0.0020878999930573627
+            },
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.9998697098344564e-07,
+              "call_s": 0.0020958999957656488,
+              "validate_s": 9.700001101009548e-06,
+              "total_s": 0.00210759999754373
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.00210759999754373,
+            "hard_timeout": false,
+            "external_wall_s": 0.7217516999953659,
+            "repetition": 3
+          },
+          {
+            "status": "optimal",
+            "raw_solver_status": 0,
+            "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "H"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "L"
+              }
+            ],
+            "objective": 2.5,
+            "bound": 2.5,
+            "gap_abs": 0.0,
+            "gap_rel": 0.0,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "build_s": 5.460000829771161e-05,
+              "solve_s": 0.0022401000023819506,
+              "total_s": 0.00243649999902118
+            },
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.0024470000062137842,
+              "validate_s": 1.170000177808106e-05,
+              "total_s": 0.002461399999447167
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.002461399999447167,
+            "hard_timeout": false,
+            "external_wall_s": 0.7239193999994313,
+            "repetition": 4
+          }
+        ],
         "time": {
           "n": 4,
-          "median_s": 0.0009612500434741378,
-          "min_s": 0.0008700001053512096,
-          "max_s": 0.0023803000804036856,
+          "median_s": 0.7228355499973986,
+          "min_s": 0.7129241999937221,
+          "max_s": 0.7294391000032192,
           "values_s": [
-            0.0023803000804036856,
-            0.0010355999693274498,
-            0.0008700001053512096,
-            0.0008869001176208258
+            0.7129241999937221,
+            0.7294391000032192,
+            0.7217516999953659,
+            0.7239193999994313
           ]
-        }
+        },
+        "n_feasible_or_optimal": 4,
+        "n_reps": 4
       },
       "greedy_quality": {
         "primary": {
@@ -92,23 +394,284 @@
             "C": 1.1
           },
           "timings": {
-            "total_s": 7.24999699741602e-05
+            "total_s": 0.00016830000095069408
           },
           "message": null,
-          "wall_s": 7.6299998909235e-05
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "remaining_t": {
+              "A": 0.0,
+              "B": 1.1102230246251565e-16,
+              "C": 0.0
+            }
+          },
+          "timings_stages": {
+            "prep_s": 1.00000761449337e-07,
+            "call_s": 0.00017430000298190862,
+            "validate_s": 8.799994247965515e-06,
+            "total_s": 0.00018509999790694565
+          },
+          "budget_s": 120.0,
+          "budget_exceeded": false,
+          "wall_s": 0.00018509999790694565,
+          "hard_timeout": false,
+          "external_wall_s": 0.7184727999992901,
+          "repetition": 1
         },
+        "repetitions": [
+          {
+            "status": "feasible",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_quality",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "H"
+              }
+            ],
+            "objective": 2.35,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "total_s": 0.00016830000095069408
+            },
+            "message": null,
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.00017430000298190862,
+              "validate_s": 8.799994247965515e-06,
+              "total_s": 0.00018509999790694565
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.00018509999790694565,
+            "hard_timeout": false,
+            "external_wall_s": 0.7184727999992901,
+            "repetition": 1
+          },
+          {
+            "status": "feasible",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_quality",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "H"
+              }
+            ],
+            "objective": 2.35,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "total_s": 0.00015809999604243785
+            },
+            "message": null,
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.0001638999965507537,
+              "validate_s": 8.600007276982069e-06,
+              "total_s": 0.0001745999907143414
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0001745999907143414,
+            "hard_timeout": false,
+            "external_wall_s": 0.8353847000107635,
+            "repetition": 2
+          },
+          {
+            "status": "feasible",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_quality",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "H"
+              }
+            ],
+            "objective": 2.35,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "total_s": 0.0001449999981559813
+            },
+            "message": null,
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 2.00001522898674e-07,
+              "call_s": 0.0001512000017100945,
+              "validate_s": 7.800001185387373e-06,
+              "total_s": 0.0001618000096641481
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0001618000096641481,
+            "hard_timeout": false,
+            "external_wall_s": 0.717474899996887,
+            "repetition": 3
+          },
+          {
+            "status": "feasible",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_quality",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "H"
+              }
+            ],
+            "objective": 2.35,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "total_s": 0.00016480000340379775
+            },
+            "message": null,
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.00017159999697469175,
+              "validate_s": 7.399998139590025e-06,
+              "total_s": 0.000182100004167296
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.000182100004167296,
+            "hard_timeout": false,
+            "external_wall_s": 0.722760599994217,
+            "repetition": 4
+          }
+        ],
         "time": {
           "n": 4,
-          "median_s": 5.725014489144087e-05,
-          "min_s": 5.16998115926981e-05,
-          "max_s": 7.6299998909235e-05,
+          "median_s": 0.7206166999967536,
+          "min_s": 0.717474899996887,
+          "max_s": 0.8353847000107635,
           "values_s": [
-            7.6299998909235e-05,
-            5.800020880997181e-05,
-            5.16998115926981e-05,
-            5.650008097290993e-05
+            0.7184727999992901,
+            0.8353847000107635,
+            0.717474899996887,
+            0.722760599994217
           ]
-        }
+        },
+        "n_feasible_or_optimal": 4,
+        "n_reps": 4
       },
       "passed": true
     },
@@ -128,25 +691,196 @@
           "gap_rel": null,
           "used_t": null,
           "timings": {
-            "build_s": 1.3299984857439995e-05,
-            "solve_s": 0.0007288998458534479,
-            "total_s": 0.0007482999935746193
+            "build_s": 5.119999696034938e-05,
+            "solve_s": 0.0018975999992107973,
+            "total_s": 0.0019672999915201217
           },
           "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
-          "wall_s": 0.0007527999114245176
+          "validation": {
+            "valid": false,
+            "errors": [
+              "empty_plan"
+            ],
+            "used_t": null,
+            "remaining_t": null
+          },
+          "timings_stages": {
+            "prep_s": 2.00001522898674e-07,
+            "call_s": 0.001977799998712726,
+            "validate_s": 8.999923011288047e-07,
+            "total_s": 0.0019815999985439703
+          },
+          "budget_s": 120.0,
+          "budget_exceeded": false,
+          "wall_s": 0.0019815999985439703,
+          "hard_timeout": false,
+          "external_wall_s": 0.7096538000041619,
+          "repetition": 1
         },
+        "repetitions": [
+          {
+            "status": "infeasible",
+            "raw_solver_status": 2,
+            "termination_reason": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "plan": [],
+            "objective": null,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": null,
+            "timings": {
+              "build_s": 5.119999696034938e-05,
+              "solve_s": 0.0018975999992107973,
+              "total_s": 0.0019672999915201217
+            },
+            "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "validation": {
+              "valid": false,
+              "errors": [
+                "empty_plan"
+              ],
+              "used_t": null,
+              "remaining_t": null
+            },
+            "timings_stages": {
+              "prep_s": 2.00001522898674e-07,
+              "call_s": 0.001977799998712726,
+              "validate_s": 8.999923011288047e-07,
+              "total_s": 0.0019815999985439703
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0019815999985439703,
+            "hard_timeout": false,
+            "external_wall_s": 0.7096538000041619,
+            "repetition": 1
+          },
+          {
+            "status": "infeasible",
+            "raw_solver_status": 2,
+            "termination_reason": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "plan": [],
+            "objective": null,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": null,
+            "timings": {
+              "build_s": 4.0099999750964344e-05,
+              "solve_s": 0.001883999997517094,
+              "total_s": 0.0019413000118220225
+            },
+            "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "validation": {
+              "valid": false,
+              "errors": [
+                "empty_plan"
+              ],
+              "used_t": null,
+              "remaining_t": null
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.0019499999907566234,
+              "validate_s": 1.1999945854768157e-06,
+              "total_s": 0.0019533999875420704
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0019533999875420704,
+            "hard_timeout": false,
+            "external_wall_s": 0.72093809999933,
+            "repetition": 2
+          },
+          {
+            "status": "infeasible",
+            "raw_solver_status": 2,
+            "termination_reason": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "plan": [],
+            "objective": null,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": null,
+            "timings": {
+              "build_s": 3.91000066883862e-05,
+              "solve_s": 0.0020764999935636297,
+              "total_s": 0.0021348000009311363
+            },
+            "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "validation": {
+              "valid": false,
+              "errors": [
+                "empty_plan"
+              ],
+              "used_t": null,
+              "remaining_t": null
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.002147699997294694,
+              "validate_s": 1.3999961083754897e-06,
+              "total_s": 0.002151399996364489
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.002151399996364489,
+            "hard_timeout": false,
+            "external_wall_s": 0.7191318000113824,
+            "repetition": 3
+          },
+          {
+            "status": "infeasible",
+            "raw_solver_status": 2,
+            "termination_reason": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "plan": [],
+            "objective": null,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": null,
+            "timings": {
+              "build_s": 4.169999738223851e-05,
+              "solve_s": 0.0019576999911805615,
+              "total_s": 0.0020195000106468797
+            },
+            "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "validation": {
+              "valid": false,
+              "errors": [
+                "empty_plan"
+              ],
+              "used_t": null,
+              "remaining_t": null
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.0020300000032875687,
+              "validate_s": 1.400010660290718e-06,
+              "total_s": 0.0020432999881450087
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0020432999881450087,
+            "hard_timeout": false,
+            "external_wall_s": 0.7191655000060564,
+            "repetition": 4
+          }
+        ],
         "time": {
           "n": 4,
-          "median_s": 0.0007394000422209501,
-          "min_s": 0.000726599944755435,
-          "max_s": 0.0007527999114245176,
+          "median_s": 0.7191486500087194,
+          "min_s": 0.7096538000041619,
+          "max_s": 0.72093809999933,
           "values_s": [
-            0.0007527999114245176,
-            0.0007480001077055931,
-            0.0007307999767363071,
-            0.000726599944755435
+            0.7096538000041619,
+            0.72093809999933,
+            0.7191318000113824,
+            0.7191655000060564
           ]
-        }
+        },
+        "n_feasible_or_optimal": 0,
+        "n_reps": 4
       },
       "greedy_quality": {
         "primary": {
@@ -160,23 +894,186 @@
           "gap_rel": null,
           "used_t": null,
           "timings": {
-            "total_s": 7.409998215734959e-05
+            "total_s": 0.00014630000805482268
           },
           "message": "stock_exceeded:B; stock_exceeded:C",
-          "wall_s": 7.770000956952572e-05
+          "validation": {
+            "valid": false,
+            "errors": [
+              "empty_plan"
+            ],
+            "used_t": null,
+            "remaining_t": null
+          },
+          "timings_stages": {
+            "prep_s": 9.998620953410864e-08,
+            "call_s": 0.00015350000467151403,
+            "validate_s": 8.00006091594696e-07,
+            "total_s": 0.00015619999612681568
+          },
+          "budget_s": 120.0,
+          "budget_exceeded": false,
+          "wall_s": 0.00015619999612681568,
+          "hard_timeout": false,
+          "external_wall_s": 0.7180998000112595,
+          "repetition": 1
         },
+        "repetitions": [
+          {
+            "status": "no_solution_found",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_no_feasible",
+            "plan": [],
+            "objective": null,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": null,
+            "timings": {
+              "total_s": 0.00014630000805482268
+            },
+            "message": "stock_exceeded:B; stock_exceeded:C",
+            "validation": {
+              "valid": false,
+              "errors": [
+                "empty_plan"
+              ],
+              "used_t": null,
+              "remaining_t": null
+            },
+            "timings_stages": {
+              "prep_s": 9.998620953410864e-08,
+              "call_s": 0.00015350000467151403,
+              "validate_s": 8.00006091594696e-07,
+              "total_s": 0.00015619999612681568
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.00015619999612681568,
+            "hard_timeout": false,
+            "external_wall_s": 0.7180998000112595,
+            "repetition": 1
+          },
+          {
+            "status": "no_solution_found",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_no_feasible",
+            "plan": [],
+            "objective": null,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": null,
+            "timings": {
+              "total_s": 0.00015639999764971435
+            },
+            "message": "stock_exceeded:B; stock_exceeded:C",
+            "validation": {
+              "valid": false,
+              "errors": [
+                "empty_plan"
+              ],
+              "used_t": null,
+              "remaining_t": null
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.00016290000348817557,
+              "validate_s": 6.00004568696022e-07,
+              "total_s": 0.0001655999949434772
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0001655999949434772,
+            "hard_timeout": false,
+            "external_wall_s": 0.7259198000101605,
+            "repetition": 2
+          },
+          {
+            "status": "no_solution_found",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_no_feasible",
+            "plan": [],
+            "objective": null,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": null,
+            "timings": {
+              "total_s": 0.00014869999722577631
+            },
+            "message": "stock_exceeded:B; stock_exceeded:C",
+            "validation": {
+              "valid": false,
+              "errors": [
+                "empty_plan"
+              ],
+              "used_t": null,
+              "remaining_t": null
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.00015550000534858555,
+              "validate_s": 8.00006091594696e-07,
+              "total_s": 0.0001584999990882352
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0001584999990882352,
+            "hard_timeout": false,
+            "external_wall_s": 0.7244060999946669,
+            "repetition": 3
+          },
+          {
+            "status": "no_solution_found",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_no_feasible",
+            "plan": [],
+            "objective": null,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": null,
+            "timings": {
+              "total_s": 0.00014629999350290745
+            },
+            "message": "stock_exceeded:B; stock_exceeded:C",
+            "validation": {
+              "valid": false,
+              "errors": [
+                "empty_plan"
+              ],
+              "used_t": null,
+              "remaining_t": null
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.00015320000238716602,
+              "validate_s": 6.999907782301307e-07,
+              "total_s": 0.000155999994603917
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.000155999994603917,
+            "hard_timeout": false,
+            "external_wall_s": 0.7250180000119144,
+            "repetition": 4
+          }
+        ],
         "time": {
           "n": 4,
-          "median_s": 5.6750024668872356e-05,
-          "min_s": 5.139992572367191e-05,
-          "max_s": 7.770000956952572e-05,
+          "median_s": 0.7247120500032906,
+          "min_s": 0.7180998000112595,
+          "max_s": 0.7259198000101605,
           "values_s": [
-            7.770000956952572e-05,
-            6.050011143088341e-05,
-            5.2999937906861305e-05,
-            5.139992572367191e-05
+            0.7180998000112595,
+            0.7259198000101605,
+            0.7244060999946669,
+            0.7250180000119144
           ]
-        }
+        },
+        "n_feasible_or_optimal": 0,
+        "n_reps": 4
       },
       "passed": true
     },
@@ -213,25 +1110,294 @@
             "C": 1.1
           },
           "timings": {
-            "build_s": 1.4399876818060875e-05,
-            "solve_s": 0.0007854998111724854,
-            "total_s": 0.0008377998601645231
+            "build_s": 4.189999890513718e-05,
+            "solve_s": 0.0019440000032773241,
+            "total_s": 0.002094399998895824
           },
           "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
-          "wall_s": 0.0008434001356363297
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "remaining_t": {
+              "A": 0.0,
+              "B": 1.1102230246251565e-16,
+              "C": 0.0
+            }
+          },
+          "timings_stages": {
+            "prep_s": 1.00000761449337e-07,
+            "call_s": 0.0021026000031270087,
+            "validate_s": 1.0299991117790341e-05,
+            "total_s": 0.0021151999972062185
+          },
+          "budget_s": 120.0,
+          "budget_exceeded": false,
+          "wall_s": 0.0021151999972062185,
+          "hard_timeout": false,
+          "external_wall_s": 0.7113219999882858,
+          "repetition": 1
         },
+        "repetitions": [
+          {
+            "status": "optimal",
+            "raw_solver_status": 0,
+            "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "H"
+              }
+            ],
+            "objective": 2.35,
+            "bound": 2.35,
+            "gap_abs": 0.0,
+            "gap_rel": 0.0,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "build_s": 4.189999890513718e-05,
+              "solve_s": 0.0019440000032773241,
+              "total_s": 0.002094399998895824
+            },
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.0021026000031270087,
+              "validate_s": 1.0299991117790341e-05,
+              "total_s": 0.0021151999972062185
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0021151999972062185,
+            "hard_timeout": false,
+            "external_wall_s": 0.7113219999882858,
+            "repetition": 1
+          },
+          {
+            "status": "optimal",
+            "raw_solver_status": 0,
+            "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "H"
+              }
+            ],
+            "objective": 2.35,
+            "bound": 2.35,
+            "gap_abs": 0.0,
+            "gap_rel": 0.0,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "build_s": 4.0700004319660366e-05,
+              "solve_s": 0.0020090000034542754,
+              "total_s": 0.0021583000052487478
+            },
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.002166100006434135,
+              "validate_s": 9.199997293762863e-06,
+              "total_s": 0.0021779000089736655
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0021779000089736655,
+            "hard_timeout": false,
+            "external_wall_s": 0.7154865999909816,
+            "repetition": 2
+          },
+          {
+            "status": "optimal",
+            "raw_solver_status": 0,
+            "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "H"
+              }
+            ],
+            "objective": 2.35,
+            "bound": 2.35,
+            "gap_abs": 0.0,
+            "gap_rel": 0.0,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "build_s": 4.3099993490614e-05,
+              "solve_s": 0.0023270999954547733,
+              "total_s": 0.0024982999893836677
+            },
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.002508799996576272,
+              "validate_s": 1.2899996363557875e-05,
+              "total_s": 0.0025240999966626987
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0025240999966626987,
+            "hard_timeout": false,
+            "external_wall_s": 0.7247007999976631,
+            "repetition": 3
+          },
+          {
+            "status": "optimal",
+            "raw_solver_status": 0,
+            "termination_reason": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "H"
+              }
+            ],
+            "objective": 2.35,
+            "bound": 2.35,
+            "gap_abs": 0.0,
+            "gap_rel": 0.0,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "build_s": 3.9099992136470973e-05,
+              "solve_s": 0.0020255999988876283,
+              "total_s": 0.002176900001359172
+            },
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.0021858000109205022,
+              "validate_s": 1.0000003385357559e-05,
+              "total_s": 0.002198100002715364
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.002198100002715364,
+            "hard_timeout": false,
+            "external_wall_s": 0.7180089999892516,
+            "repetition": 4
+          }
+        ],
         "time": {
           "n": 4,
-          "median_s": 0.0008331999415531754,
-          "min_s": 0.000821300083771348,
-          "max_s": 0.0008434001356363297,
+          "median_s": 0.7167477999901166,
+          "min_s": 0.7113219999882858,
+          "max_s": 0.7247007999976631,
           "values_s": [
-            0.0008434001356363297,
-            0.000821300083771348,
-            0.0008229999803006649,
-            0.000843399902805686
+            0.7113219999882858,
+            0.7154865999909816,
+            0.7247007999976631,
+            0.7180089999892516
           ]
-        }
+        },
+        "n_feasible_or_optimal": 4,
+        "n_reps": 4
       },
       "greedy_quality": {
         "primary": {
@@ -262,23 +1428,284 @@
             "C": 1.1
           },
           "timings": {
-            "total_s": 6.979983299970627e-05
+            "total_s": 0.00015820001135580242
           },
           "message": null,
-          "wall_s": 7.289997301995754e-05
+          "validation": {
+            "valid": true,
+            "errors": [],
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "remaining_t": {
+              "A": 0.0,
+              "B": 1.1102230246251565e-16,
+              "C": 0.0
+            }
+          },
+          "timings_stages": {
+            "prep_s": 1.00000761449337e-07,
+            "call_s": 0.00016450000111944973,
+            "validate_s": 7.90000194683671e-06,
+            "total_s": 0.00017470000602770597
+          },
+          "budget_s": 120.0,
+          "budget_exceeded": false,
+          "wall_s": 0.00017470000602770597,
+          "hard_timeout": false,
+          "external_wall_s": 0.7091845999966608,
+          "repetition": 1
         },
+        "repetitions": [
+          {
+            "status": "feasible",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_quality",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "H"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "L"
+              }
+            ],
+            "objective": 1.6500000000000001,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "total_s": 0.00015820001135580242
+            },
+            "message": null,
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.00016450000111944973,
+              "validate_s": 7.90000194683671e-06,
+              "total_s": 0.00017470000602770597
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.00017470000602770597,
+            "hard_timeout": false,
+            "external_wall_s": 0.7091845999966608,
+            "repetition": 1
+          },
+          {
+            "status": "feasible",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_quality",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "H"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "L"
+              }
+            ],
+            "objective": 1.6500000000000001,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "total_s": 0.0001610000035725534
+            },
+            "message": null,
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.0001677000109339133,
+              "validate_s": 8.199989679269493e-06,
+              "total_s": 0.00017860000662039965
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.00017860000662039965,
+            "hard_timeout": false,
+            "external_wall_s": 0.7093806999910157,
+            "repetition": 2
+          },
+          {
+            "status": "feasible",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_quality",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "H"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "L"
+              }
+            ],
+            "objective": 1.6500000000000001,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "total_s": 0.00016209999739658087
+            },
+            "message": null,
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 1.00000761449337e-07,
+              "call_s": 0.00016820000018924475,
+              "validate_s": 7.700000423938036e-06,
+              "total_s": 0.0001784999913070351
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0001784999913070351,
+            "hard_timeout": false,
+            "external_wall_s": 0.7121198000095319,
+            "repetition": 3
+          },
+          {
+            "status": "feasible",
+            "raw_solver_status": null,
+            "termination_reason": "greedy_quality",
+            "plan": [
+              {
+                "order_id": "1",
+                "recipe_id": "H"
+              },
+              {
+                "order_id": "2",
+                "recipe_id": "L"
+              },
+              {
+                "order_id": "3",
+                "recipe_id": "L"
+              }
+            ],
+            "objective": 1.6500000000000001,
+            "bound": null,
+            "gap_abs": null,
+            "gap_rel": null,
+            "used_t": {
+              "A": 1.0,
+              "B": 0.8999999999999999,
+              "C": 1.1
+            },
+            "timings": {
+              "total_s": 0.00015890000213403255
+            },
+            "message": null,
+            "validation": {
+              "valid": true,
+              "errors": [],
+              "used_t": {
+                "A": 1.0,
+                "B": 0.8999999999999999,
+                "C": 1.1
+              },
+              "remaining_t": {
+                "A": 0.0,
+                "B": 1.1102230246251565e-16,
+                "C": 0.0
+              }
+            },
+            "timings_stages": {
+              "prep_s": 9.998620953410864e-08,
+              "call_s": 0.00016549999418202788,
+              "validate_s": 8.000002708286047e-06,
+              "total_s": 0.0001756999990902841
+            },
+            "budget_s": 120.0,
+            "budget_exceeded": false,
+            "wall_s": 0.0001756999990902841,
+            "hard_timeout": false,
+            "external_wall_s": 0.728060599998571,
+            "repetition": 4
+          }
+        ],
         "time": {
           "n": 4,
-          "median_s": 6.0699996538460255e-05,
-          "min_s": 5.659996531903744e-05,
-          "max_s": 7.289997301995754e-05,
+          "median_s": 0.7107502500002738,
+          "min_s": 0.7091845999966608,
+          "max_s": 0.728060599998571,
           "values_s": [
-            7.289997301995754e-05,
-            6.280001252889633e-05,
-            5.859998054802418e-05,
-            5.659996531903744e-05
+            0.7091845999966608,
+            0.7093806999910157,
+            0.7121198000095319,
+            0.728060599998571
           ]
-        }
+        },
+        "n_feasible_or_optimal": 4,
+        "n_reps": 4
       },
       "passed": true
     }

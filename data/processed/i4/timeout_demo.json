@@ -1,0 +1,11 @@
+{
+  "budget_s": 0.2,
+  "overrun": {
+    "status": "timeout_without_plan",
+    "hard_timeout": true,
+    "budget_exceeded": true,
+    "plan_empty": true,
+    "wall_s": 0.21793600000091828
+  },
+  "passed": true
+}

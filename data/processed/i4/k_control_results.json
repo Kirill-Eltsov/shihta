@@ -37,9 +37,9 @@
           "C": 1.1
         },
         "timings": {
-          "build_s": 6.550014950335026e-05,
-          "solve_s": 0.002426199847832322,
-          "total_s": 0.0025962002109736204
+          "build_s": 3.609999839682132e-05,
+          "solve_s": 0.0023570999910589308,
+          "total_s": 0.00253129999327939
         },
         "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
       },
@@ -71,7 +71,7 @@
           "C": 1.1
         },
         "timings": {
-          "total_s": 7.199984975159168e-05
+          "total_s": 8.690000686328858e-05
         },
         "message": null
       },
@@ -90,9 +90,9 @@
         "gap_rel": null,
         "used_t": null,
         "timings": {
-          "build_s": 1.5200115740299225e-05,
-          "solve_s": 0.0008527000900357962,
-          "total_s": 0.0008758001495152712
+          "build_s": 2.0799998310394585e-05,
+          "solve_s": 0.001126899995142594,
+          "total_s": 0.0011582000006455928
         },
         "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
       },
@@ -107,7 +107,7 @@
         "gap_rel": null,
         "used_t": null,
         "timings": {
-          "total_s": 7.609999738633633e-05
+          "total_s": 9.329999738838524e-05
         },
         "message": "stock_exceeded:B; stock_exceeded:C"
       },
@@ -143,9 +143,9 @@
           "C": 1.1
         },
         "timings": {
-          "build_s": 1.4899997040629387e-05,
-          "solve_s": 0.0008324999362230301,
-          "total_s": 0.0008870000019669533
+          "build_s": 1.85999961104244e-05,
+          "solve_s": 0.0010498000046936795,
+          "total_s": 0.001116100000217557
         },
         "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
       },
@@ -177,7 +177,7 @@
           "C": 1.1
         },
         "timings": {
-          "total_s": 6.809993647038937e-05
+          "total_s": 8.480000542476773e-05
         },
         "message": null
       },
