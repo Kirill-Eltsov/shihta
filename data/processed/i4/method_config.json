@@ -35,5 +35,7 @@
   "journal_all_repetitions": true,
   "timeout_demo": "data/processed/i4/timeout_demo.json",
   "i4_k09_status": "runner_fixed_awaiting_A_recheck",
-  "i4_k10_status": "blocked_until_series_admission"
+  "i4_k10_status": "primary_series_v1_reference_run",
+  "primary_series_runner": "scripts/iteration4/run_primary_series.py",
+  "primary_series_dir": "data/processed/i4/primary_series"
 }

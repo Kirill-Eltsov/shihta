@@ -1,0 +1,155 @@
+{
+  "series_id": "I4_primary_series_v1_reference",
+  "coverage": {
+    "planned_runs": 24,
+    "recorded_runs": 24,
+    "valid_plans_across_reps": 16,
+    "valid_plan_share": 0.6666666666666666
+  },
+  "status_counts": {
+    "optimal": 8,
+    "feasible": 8,
+    "infeasible": 4,
+    "no_solution_found": 4
+  },
+  "timing_comparable": [
+    {
+      "scenario_id": "base",
+      "method": "resource_milp",
+      "median_s": 0.7295555500022601,
+      "min_s": 0.6939966000063578,
+      "max_s": 0.8337145999976201,
+      "primary_objective": 2.5,
+      "primary_status": "optimal"
+    },
+    {
+      "scenario_id": "base",
+      "method": "greedy_quality",
+      "median_s": 0.6911776500055566,
+      "min_s": 0.6850802000117255,
+      "max_s": 0.7006517999980133,
+      "primary_objective": 2.35,
+      "primary_status": "feasible"
+    },
+    {
+      "scenario_id": "changed_q",
+      "method": "resource_milp",
+      "median_s": 0.6959796499941149,
+      "min_s": 0.6885189000022365,
+      "max_s": 0.7102351999928942,
+      "primary_objective": 2.35,
+      "primary_status": "optimal"
+    },
+    {
+      "scenario_id": "changed_q",
+      "method": "greedy_quality",
+      "median_s": 0.6941369000051054,
+      "min_s": 0.6864517999929376,
+      "max_s": 0.6997615000000224,
+      "primary_objective": 1.6500000000000001,
+      "primary_status": "feasible"
+    }
+  ],
+  "primary_rows": [
+    {
+      "scenario_id": "base",
+      "resource_milp": {
+        "status": "optimal",
+        "objective": 2.5,
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "H"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "L"
+          }
+        ],
+        "median_time_s": 0.7295555500022601
+      },
+      "greedy_quality": {
+        "status": "feasible",
+        "objective": 2.35,
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "H"
+          }
+        ],
+        "median_time_s": 0.6911776500055566
+      },
+      "passed_expected": true
+    },
+    {
+      "scenario_id": "deficit",
+      "resource_milp": {
+        "status": "infeasible",
+        "objective": null,
+        "plan": [],
+        "median_time_s": 0.6931293500092579
+      },
+      "greedy_quality": {
+        "status": "no_solution_found",
+        "objective": null,
+        "plan": [],
+        "median_time_s": 0.6824475500034168
+      },
+      "passed_expected": true
+    },
+    {
+      "scenario_id": "changed_q",
+      "resource_milp": {
+        "status": "optimal",
+        "objective": 2.35,
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "H"
+          }
+        ],
+        "median_time_s": 0.6959796499941149
+      },
+      "greedy_quality": {
+        "status": "feasible",
+        "objective": 1.6500000000000001,
+        "plan": [
+          {
+            "order_id": "1",
+            "recipe_id": "H"
+          },
+          {
+            "order_id": "2",
+            "recipe_id": "L"
+          },
+          {
+            "order_id": "3",
+            "recipe_id": "L"
+          }
+        ],
+        "median_time_s": 0.6941369000051054
+      },
+      "passed_expected": true
+    }
+  ]
+}
